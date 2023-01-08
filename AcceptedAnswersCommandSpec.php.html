@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>AcceptedAnswersCommandSpec.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #a9b7c6;}
+.s3 { color: #9876aa;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+AcceptedAnswersCommandSpec.php</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?php</span>
+
+<span class="s0">namespace </span><span class="s2">spec</span><span class="s1">\</span><span class="s2">App</span><span class="s1">\</span><span class="s2">Application</span><span class="s1">\</span><span class="s2">Answers</span><span class="s0">;</span>
+
+<span class="s0">use </span><span class="s2">App</span><span class="s1">\</span><span class="s2">Application</span><span class="s1">\</span><span class="s2">Command</span><span class="s0">;</span>
+<span class="s0">use </span><span class="s2">App</span><span class="s1">\</span><span class="s2">Application</span><span class="s1">\</span><span class="s2">Questions</span><span class="s1">\</span><span class="s2">ChangeQuestionCommand</span><span class="s0">;</span>
+<span class="s0">use </span><span class="s2">App</span><span class="s1">\</span><span class="s2">Domain</span><span class="s1">\</span><span class="s2">Questions</span><span class="s1">\</span><span class="s2">Question</span><span class="s1">\</span><span class="s2">QuestionId</span><span class="s0">;</span>
+<span class="s0">use </span><span class="s2">PhpSpec</span><span class="s1">\</span><span class="s2">ObjectBehavior</span><span class="s0">;</span>
+
+<span class="s0">class </span><span class="s2">AcceptedAnswersCommandSpec </span><span class="s0">extends </span><span class="s2">ObjectBehavior</span>
+<span class="s1">{</span>
+    <span class="s0">public </span><span class="s3">$title</span><span class="s0">;</span>
+    <span class="s0">public </span><span class="s3">$body</span><span class="s0">;</span>
+
+    <span class="s0">function </span><span class="s2">let</span><span class="s1">()</span>
+    <span class="s1">{</span>
+        <span class="s3">$this</span><span class="s1">-&gt;</span><span class="s2">title </span><span class="s1">= </span><span class="s4">'title'</span><span class="s0">;</span>
+        <span class="s3">$this</span><span class="s1">-&gt;</span><span class="s2">body </span><span class="s1">= </span><span class="s4">'body'</span><span class="s0">;</span>
+        <span class="s3">$this</span><span class="s1">-&gt;</span><span class="s2">beConstructedWith</span><span class="s1">(</span><span class="s3">$this</span><span class="s1">-&gt;</span><span class="s2">title</span><span class="s0">, </span><span class="s3">$this</span><span class="s1">-&gt;</span><span class="s2">body</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">function </span><span class="s2">it_is_initializable</span><span class="s1">()</span>
+    <span class="s1">{</span>
+        <span class="s3">$this</span><span class="s1">-&gt;</span><span class="s2">shouldHaveType</span><span class="s1">(</span><span class="s2">AcceptedAnswersCommand</span><span class="s1">::</span><span class="s0">class</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">function </span><span class="s2">its_a_command</span><span class="s1">()</span>
+    <span class="s1">{</span>
+        <span class="s3">$this</span><span class="s1">-&gt;</span><span class="s2">shouldBeAnInstanceOf</span><span class="s1">(</span><span class="s2">Command</span><span class="s1">::</span><span class="s0">class</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">function </span><span class="s2">it_has_a_title</span><span class="s1">()</span>
+    <span class="s1">{</span>
+        <span class="s3">$this</span><span class="s1">-&gt;</span><span class="s2">title</span><span class="s1">()-&gt;</span><span class="s2">shouldBe</span><span class="s1">(</span><span class="s3">$this</span><span class="s1">-&gt;</span><span class="s2">title</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">function </span><span class="s2">it_has_a_body</span><span class="s1">()</span>
+    <span class="s1">{</span>
+        <span class="s3">$this</span><span class="s1">-&gt;</span><span class="s2">body</span><span class="s1">()-&gt;</span><span class="s2">shouldBe</span><span class="s1">(</span><span class="s3">$this</span><span class="s1">-&gt;</span><span class="s2">body</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
